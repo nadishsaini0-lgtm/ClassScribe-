@@ -3,7 +3,7 @@ from scipy.io.wavfile import write
 import numpy as np
 
 sprate = 16000
-duration = 5
+duration = int (input ("For how much duration the recording must go on "))
 frame = int(sprate * duration)
 print("speak now")
 recording=sd.rec(frame,sprate,1)

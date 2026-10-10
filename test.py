@@ -1,2 +1,5 @@
 import sounddevice as sd
-print (sd.query_device())
+x=input("sound?")
+print(x)
+print(type(x))
+print(x*3)
