@@ -1,0 +1,1 @@
+This project is Ai speech to text converter where it receives sound thorugh microphone and then converts it into notes.
