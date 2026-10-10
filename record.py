@@ -3,7 +3,12 @@ from scipy.io.wavfile import write
 import numpy as np
 
 sprate = 16000
-duration = int (input ("For how much duration the recording must go on "))
+while True:
+    try :
+        duration = int (input ("For how much duration the recording must go on "))
+        break
+    except ValueError :
+        print("Enter a valid number")
 frame = int(sprate * duration)
 print("speak now")
 recording=sd.rec(frame,sprate,1)
