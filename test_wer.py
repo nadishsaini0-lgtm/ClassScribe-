@@ -1,5 +1,4 @@
 import string
-import time
 from jiwer import wer
 from stt import transcribe
 
@@ -11,11 +10,10 @@ def clean(text):
         text = text.replace(ch, " ")
     return " ".join(text.split())
 
-
 scores = []
-start=time.time()
+
 for n in range(1, 6):
-    audio_path = f"Test/test{n}.wav"
+    audio_path = f"Test/s{n}.wav"
     answer_path = f"Test/text{n}.txt"
 
     model_text = transcribe(audio_path)
@@ -32,4 +30,3 @@ for n in range(1, 6):
     print(f"WER    : {score:.2f}")
 
 print(f"Average WER: {sum(scores) / len(scores):.2f}")
-print(time.time()-start)
